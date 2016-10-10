@@ -1,0 +1,54 @@
+<!-- BEGIN PROFILE HEADER -->
+<section class="full-bleed">
+    <div class="section-body style-default-dark force-padding text-shadow">
+        <div class="img-backdrop" style="background-image: url('/materialize_admin/assets/img/img16.png')"></div>
+        <div class="overlay overlay-shade-top stick-top-left height-3"></div>
+        <div class="row">
+            <div class="col-md-3 col-xs-5">
+                <img id="img-preview" class="img-circle border-white border-xl img-responsive auto-width" src="/dist/<?php echo $this->UserIdentity()->getHasIdentity()->images ?>" alt="" />
+                <h3><?php echo $this->UserIdentity()->getHasIdentity()->title ?><br/><small>Consultant at CodeCovers</small></h3>
+            </div><!--end .col -->
+            <div class="col-md-9 col-xs-7">
+                <div class="width-3 text-center pull-right">
+                    <strong class="text-xl">643</strong><br/>
+                    <span class="text-light opacity-75">followers</span>
+                </div>
+                <div class="width-3 text-center pull-right">
+                    <strong class="text-xl">108</strong><br/>
+                    <span class="text-light opacity-75">following</span>
+                </div>
+            </div><!--end .col -->
+        </div><!--end .row -->
+        <div class="overlay overlay-shade-bottom stick-bottom-left force-padding text-right">
+            <a class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Contact me"><i class="fa fa-envelope"></i></a>
+            <a class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Follow me"><i class="fa fa-twitter"></i></a>
+            <a class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Personal info"><i class="fa fa-facebook"></i></a>
+        </div>
+    </div><!--end .section-body -->
+</section>
+<!-- END PROFILE HEADER  -->
+
+<section>
+    <div class="section-body no-margin">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="container">
+                    <div class="card">
+
+                        <div class="card-head style-primary">
+                            <header>FORMULARIO DE MANUTENÇÃO</header>
+                        </div>
+
+                        <div class="card-body floating-label">
+                            <?php echo $this->messages(); ?>
+                            <?php $partial=$this->partial("/auth/auth/tpl/profile");
+                            $form->setAttribute('action',$this->url("{$this->route}/default",['controller'=>$this->controller,'action'=>'update-profile']));?>
+                            <?=$this->UserIdentity()->getForm($partial,$form);?>
+                        </div>
+                    </div>
+                </div><!--end .col -->
+                <!-- END PROFILE MENUBAR -->
+
+            </div><!--end .row -->
+        </div><!--end .section-body -->
+</section>

@@ -1,0 +1,29 @@
+<div class="form-group">
+    #security#     #email#
+    {{email}}
+</div>
+<div class="form-group">
+    #password#
+    {{password}}
+</div>
+<br>
+<div class="row">
+    <div class="col-xs-6 text-left">
+        <div class="checkbox checkbox-inline checkbox-styled">
+            <label>
+                #rememberme# <span>Remember me</span>
+            </label>
+        </div>
+    </div><!--end .col -->
+    <div class="col-xs-6 text-right">
+        #logar#
+    </div><!--end .col -->
+</div><!--end .row -->
+<br>
+<div class="row">
+    <div class="col-xs-12">
+        <p class="help-block">
+              <a  href="<?=$this->url("{$this->route}/default",['controller'=>$this->controller,'action'=>'forgothen-password']);?>"><?php echo $this->translate('Forgotten Password &#8618;'); ?></a>
+        </p>
+    </div>
+    </div>
